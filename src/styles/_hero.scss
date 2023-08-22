@@ -14,3 +14,41 @@
     }
   }
 }
+
+.hero {
+  background-image: url(../img/bg-hero.png);
+  height: calc(110vh);
+  text-align: center;
+
+  h1 {
+    padding-top: 13.75rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 3rem;
+    font-style: italic;
+    padding-top: 3.75rem;
+    font-weight: 600;
+    color: #ffa74f;
+  }
+
+  .counter-container {
+    max-width: 50.625rem;
+    height: 7.5rem;
+    margin: 7.5rem auto;
+    display: flex;
+    justify-content: space-around;
+
+    .blue-border {
+      border: 8px solid #71ecff;
+    }
+
+    p {
+      font-size: 2.25rem;
+      font-weight: 700;
+    }
+  }
+}

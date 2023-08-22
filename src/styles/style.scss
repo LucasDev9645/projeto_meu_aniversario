@@ -29,3 +29,13 @@ a {
     max-width: 90%;
   }
 }
+
+.border {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 8px solid #ffa74f;
+  width: 9.375rem;
+  height: 7.5rem;
+  border-radius: 1rem;
+}
