@@ -1,4 +1,5 @@
 @use "hero";
+@use "invitation";
 
 * {
   margin: 0;
@@ -38,4 +39,15 @@ a {
   width: 9.375rem;
   height: 7.5rem;
   border-radius: 1rem;
+}
+
+.btn {
+  width: 18.75rem;
+  height: 5rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: #ffa74f;
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
 }
