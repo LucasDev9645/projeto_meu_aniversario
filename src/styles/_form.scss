@@ -1,7 +1,7 @@
 .form-container {
   text-align: center;
   background-color: #ffa74f;
-  height: 50rem;
+  height: 46rem;
 
   h2 {
     font-family: "Montserrat", sans-serif;
@@ -31,7 +31,8 @@
       border: none;
       background: #ffa74f;
       border-bottom: 2px solid #000;
-      font-size: 1.5rem;
+      font-size: 1rem;
+
       &::placeholder {
         font-size: 1.5rem;
         color: #515151;
@@ -61,5 +62,6 @@
     font-weight: 700;
     border-radius: 0.5rem;
     margin-top: 2rem;
+    cursor: pointer;
   }
 }
