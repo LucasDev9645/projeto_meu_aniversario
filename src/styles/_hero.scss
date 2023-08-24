@@ -1,15 +1,48 @@
+@use "variables";
+
 .nav-bar {
   ul {
     padding: 3rem;
     display: flex;
     justify-content: center;
-    border-bottom: 3px solid #000;
+    border-bottom: 3px solid variables.$black;
+
     li {
       a {
         font-size: 1.5rem;
         margin: 0 3rem;
-        color: #000;
+        color: variables.$black;
         font-weight: 600;
+      }
+    }
+  }
+}
+
+@media (max-width: 920px) {
+  .nav-bar {
+    ul {
+      padding: 1.5rem;
+
+      li {
+        a {
+          font-size: 1.3rem;
+          margin: 0 2rem;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .nav-bar {
+    ul {
+      padding: 1rem;
+
+      li {
+        a {
+          font-size: 1.1rem;
+        }
       }
     }
   }
@@ -17,12 +50,11 @@
 
 .hero {
   background-image: url(../img/bg-hero.png);
-  height: calc(108vh);
+  height: 108vh;
   text-align: center;
 
   h1 {
     padding-top: 13.75rem;
-    font-family: "Montserrat", sans-serif;
     font-size: 4rem;
     font-weight: 700;
   }
@@ -32,7 +64,7 @@
     font-style: italic;
     padding-top: 3.75rem;
     font-weight: 600;
-    color: #ffa74f;
+    color: variables.$orange;
   }
 
   .counter-container {
@@ -43,12 +75,66 @@
     justify-content: space-around;
 
     .blue-border {
-      border: 8px solid #71ecff;
+      border: 8px solid variables.$blue;
     }
 
     p {
       font-size: 2.25rem;
       font-weight: 700;
+    }
+  }
+}
+
+@media (max-width: 920px) {
+  .hero {
+    h1 {
+      font-size: 3rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      padding-top: 3rem;
+    }
+
+    .counter-container {
+      max-width: 40.625rem;
+      height: 5rem;
+      margin: 5rem auto;
+
+      .blue-border {
+        border: 6px solid variables.$blue;
+      }
+
+      p {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .hero {
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      padding-top: 2rem;
+    }
+
+    .counter-container {
+      max-width: 30rem;
+      height: 4rem;
+      margin: 4rem auto;
+
+      .blue-border {
+        border: 5px solid variables.$blue;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
     }
   }
 }

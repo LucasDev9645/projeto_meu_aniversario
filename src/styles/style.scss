@@ -2,6 +2,7 @@
 @use "invitation";
 @use "form";
 @use "footer";
+@use "variables";
 
 * {
   margin: 0;
@@ -12,7 +13,13 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #fbfbfb;
+  background-color: variables.$lightGray;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
 }
 
 a {
@@ -37,10 +44,26 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 8px solid #ffa74f;
+  border: 8px solid variables.$orange;
   width: 9.375rem;
   height: 7.5rem;
   border-radius: 1rem;
+}
+
+@media (max-width: 920px) {
+  .border {
+    border: 6px solid variables.$orange;
+    width: 7rem;
+    height: 6rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .border {
+    border: 5px solid variables.$orange;
+    width: 4.5rem;
+    height: 4rem;
+  }
 }
 
 .btn {
@@ -48,8 +71,24 @@ a {
   height: 5rem;
   border: none;
   border-radius: 1rem;
-  background-color: #ffa74f;
+  background-color: variables.$orange;
   font-size: 1.6rem;
   font-weight: 700;
   cursor: pointer;
+}
+
+@media (max-width: 920px) {
+  .btn {
+    width: 14rem;
+    height: 4rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .btn {
+    width: 8rem;
+    height: 2.8rem;
+    font-size: 0.9rem;
+  }
 }

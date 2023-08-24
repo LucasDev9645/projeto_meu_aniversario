@@ -1,5 +1,7 @@
+@use "variables";
+
 .invitation-container {
-  background-color: #71ecff;
+  background-color: variables.$blue;
   height: 58rem;
   position: relative;
   display: flex;
@@ -7,8 +9,8 @@
 
   .bg-card-invitation {
     text-align: center;
-    background-color: #fff;
-    border: 10px solid #71ecff;
+    background-color: variables.$white;
+    border: 10px solid variables.$blue;
     border-radius: 1rem;
     width: 56.25rem;
     height: 57rem;
@@ -17,7 +19,6 @@
   }
 
   h3 {
-    font-family: "Montserrat", sans-serif;
     font-size: 2rem;
     font-weight: 700;
     padding-top: 6rem;
@@ -43,5 +44,78 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+@media (max-width: 920px) {
+  .invitation-container {
+    height: 44rem;
+
+    .bg-card-invitation {
+      width: 40rem;
+      height: 45rem;
+      top: -5rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      padding-top: 4rem;
+    }
+
+    h4 {
+      font-size: 1.5rem;
+      padding-top: 2.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: 500;
+      padding-top: 2.5rem;
+      line-height: 1.5;
+    }
+
+    img {
+      width: 12.5rem;
+    }
+
+    button {
+      margin-top: 2.5rem;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .invitation-container {
+    height: 29.5rem;
+
+    .bg-card-invitation {
+      width: 24rem;
+      height: 30rem;
+      top: -4rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      padding-top: 2rem;
+    }
+
+    h4 {
+      font-size: 1rem;
+      padding-top: 2rem;
+    }
+
+    p {
+      font-size: 0.7rem;
+      padding-top: 2rem;
+      line-height: 1;
+    }
+
+    img {
+      width: 6rem;
+    }
+
+    button {
+      margin-top: 2rem;
+    }
   }
 }

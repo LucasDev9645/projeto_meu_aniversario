@@ -1,10 +1,11 @@
+@use "variables";
+
 .form-container {
   text-align: center;
-  background-color: #ffa74f;
+  background-color: variables.$orange;
   height: 46rem;
 
   h2 {
-    font-family: "Montserrat", sans-serif;
     font-size: 2rem;
     font-weight: 700;
     padding-top: 3rem;
@@ -29,26 +30,26 @@
       margin-bottom: 2.5rem;
       padding: 1rem;
       border: none;
-      background: #ffa74f;
-      border-bottom: 2px solid #000;
+      background: variables.$orange;
+      border-bottom: 2px solid variables.$black;
       font-size: 1rem;
 
       &::placeholder {
         font-size: 1.5rem;
-        color: #515151;
+        color: variables.$darkGray;
       }
     }
 
     textarea {
       resize: none;
-      background-color: #ffa74f;
+      background-color: variables.$orange;
       font-size: 1rem;
       border: none;
-      border-bottom: 2px solid #000;
+      border-bottom: 2px solid variables.$black;
 
       &::placeholder {
         font-size: 1.5rem;
-        color: #515151;
+        color: variables.$darkGray;
       }
     }
   }
@@ -57,11 +58,96 @@
     width: 12.5rem;
     height: 3.125rem;
     border: none;
-    background-color: #71ecff;
+    background-color: variables.$blue;
     font-size: 1.5rem;
     font-weight: 700;
     border-radius: 0.5rem;
     margin-top: 2rem;
     cursor: pointer;
+  }
+}
+
+@media (max-width: 920px) {
+  .form-container {
+    height: 40rem;
+
+    h2 {
+      font-size: 1.5rem;
+      padding-top: 2.5rem;
+    }
+
+    p {
+      font-size: 1.3rem;
+      padding-top: 1.5rem;
+      padding-bottom: 3rem;
+    }
+
+    form {
+      max-width: 25rem;
+
+      input {
+        margin-bottom: 2rem;
+        padding: 0.7rem;
+
+        &::placeholder {
+          font-size: 1.2rem;
+        }
+      }
+
+      textarea {
+        &::placeholder {
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    button {
+      width: 10rem;
+      height: 3rem;
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .form-container {
+    height: 30.5rem;
+
+    h2 {
+      font-size: 1.2rem;
+      padding-top: 2rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+    }
+
+    form {
+      max-width: 20rem;
+
+      input {
+        margin-bottom: 1.5rem;
+        padding: 0.5rem;
+
+        &::placeholder {
+          font-size: 0.95rem;
+        }
+      }
+      textarea {
+        &::placeholder {
+          font-size: 0.96rem;
+        }
+      }
+    }
+
+    button {
+      width: 8rem;
+      height: 2.5rem;
+      font-size: 1rem;
+      margin-top: 0.4rem;
+    }
   }
 }
